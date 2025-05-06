@@ -146,67 +146,43 @@
             text-shadow: 0 0 10px rgba(235, 255, 0, 0.7);
         }
 
-        li span {
-          --rotate-velocity: calc(var(--rotate) - var(--delayed-rotate));
-          --rotate-spacing: calc(var(--spacing) * -4 * var(--rotate-velocity));
-          --x: calc(var(--circle-size) / 2 + var(--rotate-spacing));
-          --y: calc(10px * var(--rotate-velocity));
-          --r: calc(90deg * var(--rotate-velocity));
+        /* Base span styling */
+li span {
+  --rotate-velocity: calc(var(--rotate) - var(--delayed-rotate));
+  --rotate-spacing: calc(var(--spacing) * -4 * var(--rotate-velocity));
+  --x: calc(var(--circle-size) / 2 + var(--rotate-spacing));
+  --y: calc(10px * var(--rotate-velocity));
+  --r: calc(90deg * var(--rotate-velocity));
+  display: inline-block;
+  transform: translate(var(--x), var(--y)) rotate(var(--r, 0deg));
+}
 
-          display: inline-block;
-          transform: translate(var(--x), var(--y)) rotate(var(--r, 0deg));
-        }
-
-        li span:nth-child(1) {
-            --y: calc((1 * -20px) * var(--rotate-velocity));
-            transform-origin: var(--x) 0;
-            transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 0) ease-out;
-        }
-        li span:nth-child(2) {
-            --y: calc((2 * -20px) * var(--rotate-velocity));
-            transform-origin: var(--x) 0;
-            transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 1) ease-out;
-        }
-        li span:nth-child(3) {
-            --y: calc((3 * -20px) * var(--rotate-velocity));
-            transform-origin: var(--x) 0;
-            transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 2) ease-out;
-        }
-        li span:nth-child(4) {
-            --y: calc((4 * -20px) * var(--rotate-velocity));
-            transform-origin: var(--x) 0;
-            transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 3) ease-out;
-        }
-        li span:nth-child(5) {
-            --y: calc((5 * -20px) * var(--rotate-velocity));
-            transform-origin: var(--x) 0;
-            transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 4) ease-out;
-        }
-        li span:nth-child(6) {
-            --y: calc((6 * -20px) * var(--rotate-velocity));
-            transform-origin: var(--x) 0;
-            transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 5) ease-out;
-        }
-        li span:nth-child(7) {
-            --y: calc((7 * -20px) * var(--rotate-velocity));
-            transform-origin: var(--x) 0;
-            transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 6) ease-out;
-        }
-        li span:nth-child(8) {
-            --y: calc((8 * -20px) * var(--rotate-velocity));
-            transform-origin: var(--x) 0;
-            transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 7) ease-out;
-        }
-        li span:nth-child(9) {
-            --y: calc((9 * -20px) * var(--rotate-velocity));
-            transform-origin: var(--x) 0;
-            transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 8) ease-out;
-        }
-        li span:nth-child(10) {
-            --y: calc((10 * -20px) * var(--rotate-velocity));
-            transform-origin: var(--x) 0;
-            transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 9) ease-out;
-        }
+/* Dynamic letter animation (up to 25 letters) */
+li span:nth-child(1) { --y: calc((1 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 0) ease-out; }
+li span:nth-child(2) { --y: calc((2 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 1) ease-out; }
+li span:nth-child(3) { --y: calc((3 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 2) ease-out; }
+li span:nth-child(4) { --y: calc((4 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 3) ease-out; }
+li span:nth-child(5) { --y: calc((5 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 4) ease-out; }
+li span:nth-child(6) { --y: calc((6 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 5) ease-out; }
+li span:nth-child(7) { --y: calc((7 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 6) ease-out; }
+li span:nth-child(8) { --y: calc((8 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 7) ease-out; }
+li span:nth-child(9) { --y: calc((9 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 8) ease-out; }
+li span:nth-child(10) { --y: calc((10 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 9) ease-out; }
+li span:nth-child(11) { --y: calc((11 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 10) ease-out; }
+li span:nth-child(12) { --y: calc((12 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 11) ease-out; }
+li span:nth-child(13) { --y: calc((13 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 12) ease-out; }
+li span:nth-child(14) { --y: calc((14 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 13) ease-out; }
+li span:nth-child(15) { --y: calc((15 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 14) ease-out; }
+li span:nth-child(16) { --y: calc((16 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 15) ease-out; }
+li span:nth-child(17) { --y: calc((17 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 16) ease-out; }
+li span:nth-child(18) { --y: calc((18 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 17) ease-out; }
+li span:nth-child(19) { --y: calc((19 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 18) ease-out; }
+li span:nth-child(20) { --y: calc((20 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 19) ease-out; }
+li span:nth-child(21) { --y: calc((21 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 20) ease-out; }
+li span:nth-child(22) { --y: calc((22 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 21) ease-out; }
+li span:nth-child(23) { --y: calc((23 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 22) ease-out; }
+li span:nth-child(24) { --y: calc((24 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 23) ease-out; }
+li span:nth-child(25) { --y: calc((25 * -20px) * var(--rotate-velocity)); transform-origin: var(--x) 0; transition: --delayed-rotate calc(var(--ease-speed, 100ms) * 24) ease-out; }
 
         em {
           display: block;
