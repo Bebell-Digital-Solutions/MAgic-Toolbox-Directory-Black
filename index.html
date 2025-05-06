@@ -64,6 +64,43 @@
             transition: all 0.3s ease;
         }
 
+        .logo-tooltip {
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ebff00;
+        color: #000;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        pointer-events: none;
+        z-index: 20;
+    }
+
+    .logo-container:hover .logo-tooltip {
+        opacity: 1;
+        visibility: visible;
+        bottom: -30px;
+    }
+
+    /* Small arrow for the tooltip */
+    .logo-tooltip::after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #ebff00 transparent;
+    }
+
         .logo-container:hover {
             transform: translate(-50%, -50%) scale(1.05);
             box-shadow: 0 0 30px rgba(235, 255, 0, 0.8);
@@ -139,6 +176,7 @@
             font-family: 'Poppins', sans-serif;
             color: #ffffff;
             transition: color 0.3s ease, text-shadow 0.3s ease;
+            cursor: url('hover-cursor.png'), grab;
         }
 
         li a:hover {
@@ -206,7 +244,7 @@ li span:nth-child(26) { --y: calc((26 * -20px) * var(--rotate-velocity)); transf
       <div class="logo-container">
         <a href="https://magictoolbox.net" aria-label="Magic Toolbox Home">
             <img src="https://bucket.mlcdn.com/a/3336/3336910/images/4750de8f08e2d68764dd9c049b523a66818f0d64.png" alt="Magic Toolbox Logo">
-        </a>
+       <div class="logo-tooltip">Página de Inicio</div> </a>
     </div>
     
      <ul>
@@ -228,8 +266,11 @@ li span:nth-child(26) { --y: calc((26 * -20px) * var(--rotate-velocity)); transf
         <li><a href="https://magictoolbox.net/email-marketing-newsletters" target="_blank"><span>E</span><span>m</span><span>a</span><span>i</span><span>l</span> <span>M</span><span>a</span><span>r</span><span>k</span><span>e</span><span>t</span><span>i</span><span>n</span><span>g</span> <span>y</span> <span>N</span><span>e</span><span>w</span><span>s</span><span>l</span><span>e</span><span>t</span><span>t</span><span>e</span><span>r</span><span>s</span></a></li>
         <li><a href="https://magictoolbox.net/ventas-crm" target="_blank"><span>V</span><span>e</span><span>n</span><span>t</span><span>a</span><span>s</span> <span>y</span> <span>C</span><span>R</span><span>M</span></a></li>
         <li><a href="https://magictoolbox.net/ecommerce" target="_blank"><span>E</span><span>c</span><span>o</span><span>m</span><span>m</span><span>e</span><span>r</span><span>c</span><span>e</span></a></li>
-        <li><a href="https://magictoolbox.net/finanzas" target="_blank"><span>F</span><span>i</span><span>n</span><span>a</span><span>n</span><span>z</span><span>a</span><span>s</span></a></li>
-        <li><a href="https://magictoolbox.net/proteccion-seguridad" target="_blank"><span>P</span><span>r</span><span>o</span><span>t</span><span>e</span><span>c</span><span>c</span><span>i</span><span>ó</span><span>n</span> <span>y</span> <span>S</span><span>e</span><span>g</span><span>u</span><span>r</span><span>i</span><span>d</span><span>a</span><span>d</span></a></li>
+<li><a href="https://magictoolbox.net/finanzas" target="_blank">
+  <span>F</span><span>i</span><span>n</span><span>a</span><span>n</span><span>z</span><span>a</span><span>s</span>
+  <span> </span><span>y</span><span> </span>
+  <span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>b</span><span>i</span><span>l</span><span>i</span><span>d</span><span>a</span><span>d</span>
+</a></li>        <li><a href="https://magictoolbox.net/proteccion-seguridad" target="_blank"><span>P</span><span>r</span><span>o</span><span>t</span><span>e</span><span>c</span><span>c</span><span>i</span><span>ó</span><span>n</span> <span>y</span> <span>S</span><span>e</span><span>g</span><span>u</span><span>r</span><span>i</span><span>d</span><span>a</span><span>d</span></a></li>
         <li><a href="https://magictoolbox.net/creacion-ia" target="_blank"><span>C</span><span>r</span><span>e</span><span>a</span><span>c</span><span>i</span><span>ó</span><span>n</span> <span>c</span><span>o</span><span>n</span> <span>I</span><span>A</span></a></li>
         <li><a href="https://magictoolbox.net/herramientas-freelancer" target="_blank"><span>H</span><span>e</span><span>r</span><span>r</span><span>a</span><span>m</span><span>i</span><span>e</span><span>n</span><span>t</span><span>a</span><span>s</span> <span>F</span><span>r</span><span>e</span><span>e</span><span>l</span><span>a</span><span>n</span><span>c</span><span>e</span><span>r</span></a></li>
         <li><a href="https://magictoolbox.net/formularios-reservas" target="_blank"><span>F</span><span>o</span><span>r</span><span>m</span><span>u</span><span>l</span><span>a</span><span>r</span><span>i</span><span>o</span><span>s</span> <span>y</span> <span>R</span><span>e</span><span>s</span><span>e</span><span>r</span><span>v</span><span>a</span><span>s</span></a></li>      
