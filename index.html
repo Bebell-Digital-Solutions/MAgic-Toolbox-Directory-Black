@@ -262,5 +262,16 @@
     </ul>
 
     <em>Tu navegador no soporta las últimas características de scroll ☹️</em>
+
+    
+    <script>
+  // Automatically add target="_blank" to all links in the circle
+  document.querySelectorAll('ul li a').forEach(link => {
+    link.setAttribute('target', '_blank');
+  });
+  
+  // Also add it to the logo link
+  document.querySelector('.logo-container a').setAttribute('target', '_blank');
+</script>
 </body>
 </html>
